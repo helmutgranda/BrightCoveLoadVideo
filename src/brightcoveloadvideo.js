@@ -7,7 +7,7 @@ $.BCLoadMp4 = function(el, options) {
 
         var defaults = {
         	token: 'jskS1rEtQHy9exQKoc14IcMq8v5x2gCP6yaB7d0hraRtO__6HUuxMg..',
-        	fields: 'FLVURL,thumbnailURL',
+        	fields: 'url,thumbnailURL',
         	mediaDelivery: 'http',
         	domain: 'http://api.brightcove.com/services/library',
         	command: 'find_video_by_id',
@@ -49,7 +49,7 @@ $.BCLoadMp4 = function(el, options) {
         }
 
         var createPlayer = function(e) {
-		plugin.el.append('<div class="bcvideo"><a href="' + e.FLVURL+ '"><img class="bcimage" src="'+e.thumbnailURL+'"></a></div>')
+		plugin.el.append('<div class="bcvideo"><a href="' + e.url+ '"><img class="bcimage" src="'+e.thumbnailURL+'"></a></div>')
         }
 
 
