@@ -11,7 +11,7 @@ $.BCLoadMp4 = function(el, options) {
         	mediaDelivery: 'http',
         	domain: 'http://api.brightcove.com/services/library',
         	command: 'find_video_by_id',
-          propertyName: 'value'
+          	propertyName: 'value'
         }
 
         var plugin = this;
