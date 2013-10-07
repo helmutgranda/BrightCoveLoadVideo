@@ -1,0 +1,27 @@
+{
+  "name": "BrightCoveLoadVideo",
+  "version": "0.0.1",
+  "description": "jQuery plugin for BrightCove",
+  "main": "bcloadmp4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helmutgranda/BrightCoveLoadVideo.git"
+  },
+  "keywords": [
+    "javascript",
+    "jQuery",
+    "BrightCove"
+  ],
+  "author": "Helmut Granda",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/helmutgranda/BrightCoveLoadVideo/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.4"
+  }
+}
