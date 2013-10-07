@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>BrightCove Test</title>
+
+		<style type="text/css">
+			.bcimage {
+				height: 134px;
+				width: 240px;
+			}
+
+			.bcvideo {
+				margin-bottom: 20px;
+			}
+		</style>	
+
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="BrightCoveLoadVideo.min.js"></script>
+		<script>
+
+            $(document).ready(function() {
+
+                var isMobile = (/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent);
+
+                if (!isMobile){
+
+                    var pluginSettings = {
+                        token: 'jskS1rEtQHy9exQKoc14IcMq8v5x2gCP6yaB7d0hraRtO__6HUuxMg..'
+                    }
+
+                    var bcPlayer = new $.BCLoadMp4($('#video-container'), pluginSettings);
+
+                    bcPlayer.prepareAsset('67644198001');
+                    bcPlayer.prepareAsset('67644212001');
+                    bcPlayer.prepareAsset('67909129001');
+                    bcPlayer.prepareAsset('68143720001');
+                    bcPlayer.prepareAsset('96851865001');
+
+                }
+
+            });
+
+		</script>
+	</head>
+	<body>
+
+	   <div id="video-container"></div>
+		
+	</body>
+</html>
