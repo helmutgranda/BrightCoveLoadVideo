@@ -23,14 +23,14 @@ $.BCLoadMp4 = function(el, options) {
             plugin.el = el;
         }
 
-        plugin.load_thumb = function(videoId) {
+        plugin.prepareAsset = function(videoId) {
 
         	var url = 	plugin.settings.domain + '?command=' + 
-        				plugin.settings.command + '&video_id=' + 
-        				videoId + '&video_fields=' + 
-        				plugin.settings.fields + '&media_delivery=' + 
-        				plugin.settings.mediaDelivery + '&token=' + 
-        				plugin.settings.token; 
+        			plugin.settings.command + '&video_id=' + 
+        			videoId + '&video_fields=' + 
+        			plugin.settings.fields + '&media_delivery=' + 
+        			plugin.settings.mediaDelivery + '&token=' + 
+        			plugin.settings.token; 
         	
     			$.ajax({
     				url: url,
@@ -38,7 +38,7 @@ $.BCLoadMp4 = function(el, options) {
     				crossDomain: true,
     				dataType: 'jsonp',
     				success: function(e) {
-    					create_player(e)
+    					createPlayer(e)
     				},
     				error: function() {
       				// nothing at this moment
@@ -48,8 +48,8 @@ $.BCLoadMp4 = function(el, options) {
 
         }
 
-        var create_player = function(e) {
-			    plugin.el.append('<div class="bcvideo"><a href="' + e.FLVURL+ '"><img class="bcimage" src="'+e.thumbnailURL+'"></a></div>')
+        var createPlayer = function(e) {
+		plugin.el.append('<div class="bcvideo"><a href="' + e.FLVURL+ '"><img class="bcimage" src="'+e.thumbnailURL+'"></a></div>')
         }
 
 
