@@ -13,7 +13,7 @@ var pluginSettings = {
   token: 'xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxX..'
 }
 
-var bcPlayer = new $.BCLoadMp4( $('#id') , pluginSettings);
+var bcPlayer = new $.BCLoadMp4( $('#id') , pluginSettings );
 
-bcPlayer.loadVideo('XXXXXXXXXXXXX');
+bcPlayer.prepareAsset( 'XXXXXXXXXXXXX' );
 ```
